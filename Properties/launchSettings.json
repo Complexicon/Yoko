@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Profil \"1\"": {
+      "commandName": "Project",
+      "commandLineArgs": "hydrate",
+      "workingDirectory": "F:\\Userdata\\Desktop\\testfolder",
+    }
+  }
+}
