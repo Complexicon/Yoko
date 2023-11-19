@@ -28,9 +28,6 @@ it also contains your most recent "plugin.jar" a.k.a. your plugin
 
 yoko will also create a ".yoko" folder in your userprofile directory to cache minecraft servers, jdks, dependencies, etc
 
-## the .plug_cache folder in your home folder
-this folder contains all the different api jars, maven dependency jars, and spigot server jars to avoid having multiple copies of everything
-
 ## currently under construction
 - automatic jdk detection (only works on windows currently. hold tight my fellow linux and mac users!)
 - maven dependency system half baked
