@@ -56,7 +56,7 @@ class BuildAction : ICLIAction {
 
 		if(toBuild.Count > 0) {
 
-			var compileOK = await compiler.RunWithArgsEcho(
+			var compileOK = await compiler.RunWithArgsEcho(new string[] {
 				"-encoding",
 				"UTF-8",
 				"-cp",
@@ -65,8 +65,7 @@ class BuildAction : ICLIAction {
 				YokoPaths.SourceDir,
 				"-d",
 				YokoPaths.CompilerOut,
-				string.Join(' ', toBuild)
-			);
+			}.Concat(toBuild).ToArray());
 
 			if(!compileOK) {
 				AnsiConsole.MarkupLine("[red]Build failed.[/]");
