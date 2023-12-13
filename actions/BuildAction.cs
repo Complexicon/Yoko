@@ -91,6 +91,7 @@ class BuildAction : ICLIAction {
 		// hack for file locking
 		var pluginBin = File.ReadAllBytes(YokoPaths.PluginJar);
 		var pluginDevServer = new FileStream(YokoPaths.LocalServerPluginJar, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite);
+		pluginDevServer.SetLength(0);
 		pluginDevServer.Write(pluginBin, 0, pluginBin.Length);
 		pluginDevServer.Flush();
 		pluginDevServer.Close();

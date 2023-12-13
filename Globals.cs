@@ -177,7 +177,7 @@ class Globals {
 			.Element("value")?
 			.Value;
 
-		bool shaded = v <= new Version(1, 11, 2);
+		bool shaded = true;//v <= new Version(1, 11, 2);
 
 		var apiUrl = $"https://hub.spigotmc.org/nexus/content/repositories/snapshots/org/spigotmc/spigot-api/{v}-R0.1-SNAPSHOT/spigot-api-{fileName}{(shaded ? "-shaded" : "")}.jar";
 		var apiSrcUrl = $"https://hub.spigotmc.org/nexus/content/repositories/snapshots/org/spigotmc/spigot-api/{v}-R0.1-SNAPSHOT/spigot-api-{fileName}-sources.jar";
